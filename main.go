@@ -12,6 +12,6 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	}
-	log.Println("Starting server at localhost:8080")
+	log.Println("Starting server at localhost:8080 serving files at", pwd)
 	log.Fatal(http.ListenAndServe(":8080", http.FileServer(http.Dir(pwd))))
 }
